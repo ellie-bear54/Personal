@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(148, 186, 101); /* hex code #808080 */
+}
+
+#page-wrapper {
+  background-color: white;
+  width: 1200px;
+  display: grid;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Cherry Swash', cursive;
+  text-align: center;
+}
+
+#header-nav {
+
+}
+
+#header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgb(57, 78, 28);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#header-nav li {
+  display: inline;
+  border: 2px;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: 2px;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 12px;
+}
+
+li a:hover {
+  background-color: rgb(239, 232, 190);
+  color: black;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: left;
+  background-color: rgb(239, 232, 190);
+}
+
+.item3 {
+  grid-area: main;
+  background-color: rgb(239, 232, 190);
+  text-align: center;
+}
+
+.item4 {
+  grid-area: right;
+  text-align: right;
+  background-color: rgb(239, 232, 190);
+}
+
+.item5 {
+  grid-area: footer;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'left main main main right'
+    'footer footer footer footer footer';
+  grid-gap: 10px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries go at the bottom of the style sheet; only change what you need to change; can have multiple media queries with different breakpoints; media queries don't override each other UNLESS YOU SPECIFY */
+
+/* phone size */
+@media all and (max-width: 600px) {
+  #page-wrapper { width: 100%; }
+  #header-nav { grid-template-columns: 1fr; }
+  #header-nav li { display: grid; }
+}
+
+/* tablet size*/
+@media all and (min-width: 600px) {
+  #page-wrapper { width: 100%; }
+  #header-nav { grid-template-columns: repeat(5,1fr); }
+}
+
+/* computer size*/
+@media all and (min-width: 992px) {
+ #page-wrapper { width: 1200px; }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Ellie Homepage</title>
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <div id="header">
+        <div id="header-image"> <img src="logo.png" alt="logo">
+
+        </div><!--end header-image div-->
+        <div id="header-nav">
+          <ul>
+            <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">Gmail</a></li>
+            <li><a href="https://outlook.office.com/mail/" target="_blank">Outlook</a></li>
+            <li><a href="dana.html" target="_blank">Dana</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1r0YWSr9--48g1XJXsHKIe-XbsamXkg4tjAR5s1ntXQc/edit#gid=0" target="_blank">Goals</a></li>
+            <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+            <li><a href="projects.html" target="_blank">Projects</a></li>
+            <li><a href="https://drive.google.com/drive/starred" target="_blank">GDrive</a></li>
+            <li><a href="https://reggienet.illinoisstate.edu/" target="_blank">Reggienet</a></li>
+          </ul>
+        </div><!--end header-nav div-->
+      </div> <!--end header div-->
+      <div id="body">
+        <div id="grid-container">
+          <div class="item1">
+            <a target="_blank" href="https://open.spotify.com/"><img src="spotify-logo-png.png" alt="Open Spotify" id="spotify-logo"></a>
+            <br>
+            <p id="timer-title">Countdown to 23:00 on May 5, 2022</p>
+            <p id="timer"></p>
+
+
+
+
+
+
+          <br>
+          <a target="_blank" href="https://docs.google.com/spreadsheets/d/1r0YWSr9--48g1XJXsHKIe-XbsamXkg4tjAR5s1ntXQc/edit#gid=659145168"><img src="dollar-sign-png.png" alt="Open Budget" id="budget-logo"></a>
+          </div> <!--end item1-->
+
+          <div class="item2">
+
+            <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MTZqcTVwbWswbnM1NzBiM2Q4cjU1dWloZWQgbGl6enkuZnVsbG5lc3MyN0Bt&amp;tmsrc=lizzy.fullness27%40gmail.com">Add to Calendar</a>
+            <br>
+            <br>
+            <iframe class="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=bGl6enkuZnVsbG5lc3MyN0BnbWFpbC5jb20&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23AD1457&amp;color=%23A79B8E"></iframe>
+
+
+          </div> <!--end item2-->
+
+          <div class="item3">
+            <h4>Reminders</h4>
+            <ul>
+              <li>Rent due: 1st-5th of the month</li>
+              <li>Water due:</li>
+              <li>Electricity due:</li>
+              <li>Phone due: 17th-20th of the month</li>
+              <li>Internet due: 1st of the month</li>
+              <li>ISU Balance due: roughly middle of the month</li>
+            </ul>
+            <br>
+            <a target="_blank" href="https://www.youtube.com/results?search_query=guided+meditation"><img src="youtube-logo-png.png" alt="Open YouTube" id="youtube-logo"></a>
+            <br>
+            <a target="_blank" href="https://www.amazon.com/hz/wishlist/ls/38IRF9WP1QHDJ"><img src="amazon-logo-png.png" alt="Open Amazon Wishlist" id="amazon-logo"></a>
+
+
+          </div> <!--end item3-->
+
+          <div class="item4">
+
+
+
+
+          </div> <!--end item4-->
+        </div> <!--end grid-container div-->
+      </div> <!--end body div-->
+
+
+    </div> <!--end page-wrapper div-->
+
+    <script type="text/javascript">
+      // Set the date we're counting down to
+        var countDownDate = new Date("May 5, 2022 23:00:00").getTime();
+
+      // Update the count down every 1 second
+        var x = setInterval(function() {
+
+      // Get today's date and time
+        var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+    </script>
+  </body>
+</html>
